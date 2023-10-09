@@ -6,6 +6,7 @@ import {AuthGuard} from "./app/auth.guard";
 import { UserService } from './app/user.service';
 import {inject} from "@angular/core";
 import {RegisterComponent} from "./app/pages/register/register.component";
+import {HeaderComponent} from "./app/layout/header/header.component";
 import {map, timer} from "rxjs";
 // import {window} from "rxjs";
 
@@ -107,6 +108,7 @@ const routes: Routes = [
 
 
   {
+
     path: '',
     title: 'Главная',
     children: [
@@ -114,6 +116,11 @@ const routes: Routes = [
         path: '',
         loadComponent: () =>  import('./app/pages/main/main.component').then(
           (c) => c.MainComponent),
+      },
+      {
+        path: '',
+        loadComponent: () =>  import('./app/layout/header/header.component').then(
+          (c) => c.HeaderComponent),
       },
       {
         path: 'register',

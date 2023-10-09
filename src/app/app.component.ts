@@ -17,7 +17,7 @@ import {BredcrumbsComponent} from "./components/bredcrumbs/bredcrumbs.component"
   // templateUrl: 'index.html',
   styleUrls: ['./app.component.scss'],
   // styleUrls: ['dz_1.css']
-  imports: [RouterOutlet, RouterLink, HeaderComponent, BredcrumbsComponent],
+  imports: [RouterOutlet, RouterLink, HeaderComponent, BredcrumbsComponent, HeaderComponent],
   // imports: [RouterOutlet],
   standalone: true,
 })
