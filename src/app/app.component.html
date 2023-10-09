@@ -1,20 +1,48 @@
-<!--<h1> {{ title }}</h1>-->
-<header></header>
+<app-header></app-header>
+<app-bredcrumbs></app-bredcrumbs>
+<!--<app-emoji-list></app-emoji-list>-->
 
-<content>
-<!--  <app-product *ngFor="let p of products" [product]="p" ></app-product>-->
+<a routerLink="/">main</a>
+<br />
+<a routerLink="/lk">lk</a>
+<br />
+<a routerLink="/ads/">ads list</a>
+<br />
+<a routerLink="/ads/123">card</a>
+<br />
+<a routerLink="/register">Регистрация</a>
+<br />
+<a routerLink="/user/1234">ЛК</a>
+<!--<a routerLink="/ads/123?guid=asdasda2-asdas24">card</a>-->
+<!--<br />-->
+<!--<button (click)="goToCard()">card</button>-->
 
-  <app-company *ngFor="let p of companys" [company]="p" ></app-company>
-</content>
+<router-outlet></router-outlet>
+<!--<app-body></app-body>-->
+<!--<app-footer></app-footer>-->
 
 
-<!--<div class="wrap">-->
-<!--  <p>  qweqweq</p>-->
-<!--</div>-->
 
 
-<footer>
 
-</footer>
+
+<!--&lt;!&ndash;<h1> {{ title }}</h1>&ndash;&gt;-->
+<!--<header></header>-->
+
+<!--<content>-->
+<!--&lt;!&ndash;  <app-product *ngFor="let p of products" [product]="p" ></app-product>&ndash;&gt;-->
+
+<!--  <app-company *ngFor="let p of companys" [company]="p" ></app-company>-->
+<!--</content>-->
+
+
+<!--&lt;!&ndash;<div class="wrap">&ndash;&gt;-->
+<!--&lt;!&ndash;  <p>  qweqweq</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+<!--<footer>-->
+
+<!--</footer>-->
 
 
