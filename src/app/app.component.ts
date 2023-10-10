@@ -10,6 +10,8 @@ import {RouterOutlet, RouterLink } from "@angular/router";
 
 import {HeaderComponent} from "./layout/header/header.component";
 import {BredcrumbsComponent} from "./components/bredcrumbs/bredcrumbs.component";
+import {ButtonModule} from "primeng/button";
+
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,7 @@ import {BredcrumbsComponent} from "./components/bredcrumbs/bredcrumbs.component"
   // templateUrl: 'index.html',
   styleUrls: ['./app.component.scss'],
   // styleUrls: ['dz_1.css']
-  imports: [RouterOutlet, RouterLink, HeaderComponent, BredcrumbsComponent, HeaderComponent],
+  imports: [RouterOutlet, RouterLink, HeaderComponent, BredcrumbsComponent, HeaderComponent,ButtonModule],
   // imports: [RouterOutlet],
   standalone: true,
 })

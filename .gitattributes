@@ -1,0 +1,8 @@
+* text= auto eol=lf
+
+# Specify the following file types to be text, and do the CRLF/LF conversion.
+*.py text eol=lf
+*.ts text eol=lf
+
+# Leave the binary files as-is.
+*.png binary

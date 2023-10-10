@@ -9,6 +9,7 @@ import {RegisterComponent} from "./app/pages/register/register.component";
 import {HeaderComponent} from "./app/layout/header/header.component";
 import {map, timer} from "rxjs";
 // import {window} from "rxjs";
+import { ButtonModule } from 'primeng/button';
 
 
 // import { AppModule } from './app/app.module';
