@@ -5,8 +5,8 @@ import {RouterLink, RouterOutlet} from "@angular/router";
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [RouterOutlet,RouterLink],
-  standalone: true
+  // imports: [RouterOutlet,RouterLink],
+  // standalone: true
 })
 export class HeaderComponent {
 

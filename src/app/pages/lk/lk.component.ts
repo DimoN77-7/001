@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-lk',
   templateUrl: './lk.component.html',
   styleUrls: ['./lk.component.scss'],
-  standalone: true,
+  // standalone: true,
 })
 export class LkComponent {
 

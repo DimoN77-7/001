@@ -5,8 +5,8 @@ import {CommonModule} from "@angular/common";
   selector: 'app-new',
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.scss'],
-  imports: [CommonModule],
-  standalone: true
+  // imports: [CommonModule],
+  // standalone: true
 })
 export class NewComponent {
 

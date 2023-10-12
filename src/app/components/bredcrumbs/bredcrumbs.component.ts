@@ -10,8 +10,8 @@ import  {filter} from "rxjs";
 
 @Component({
   selector: 'app-bredcrumbs',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
+  // standalone: true,
+  // imports: [CommonModule, RouterLink],
   templateUrl: './bredcrumbs.component.html',
   styleUrls: ['./bredcrumbs.component.scss'],
 })
