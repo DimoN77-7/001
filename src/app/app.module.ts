@@ -14,12 +14,10 @@ import {EmojiListComponent} from './shared/components/emoji-list/emoji-list.comp
 import {ErrorInterceptor} from "./shared/error-interceptor";
 import {AuthInterceptor} from "./shared/auth-interceptor";
 import { BredcrumbsComponent } from './components/bredcrumbs/bredcrumbs.component';
-// import {LkComponent} from "./pages/lk/lk.component";
 import {NewComponent} from "./pages/ads/list/new/new.component";
 import {PopularComponent} from "./pages/ads/list/popular/popular.component";
+import {ListComponent} from "./pages/ads/list/list.component";
 // import {CardComponent} from "./pages/ads/card/card.component";
-
-
 
 
 
@@ -35,9 +33,9 @@ import {PopularComponent} from "./pages/ads/list/popular/popular.component";
     BodyComponent,
     BredcrumbsComponent,
     EmojiListComponent,
-    // LkComponent,
-    NewComponent,
-    PopularComponent,
+    ListComponent,
+    // NewComponent,
+    // PopularComponent,
     // CardComponent
   ],
   imports: [

@@ -9,6 +9,9 @@ import {ButtonModule} from "primeng/button";
 import {EmojiListComponent} from "./shared/components/emoji-list/emoji-list.component";
 import {HttpClientModule} from "@angular/common/http";
 import {ErrorInterceptor} from "./shared/error-interceptor";
+import {NewComponent} from "./pages/ads/list/new/new.component";
+import {CommonModule} from "@angular/common";
+import {ListComponent} from "./pages/ads/list/list.component";
 // import {MainComponent} from "./pages/main/main.component";
 
 
@@ -19,9 +22,10 @@ import {ErrorInterceptor} from "./shared/error-interceptor";
   templateUrl: './app.component.html',
   // templateUrl: 'index.html',
   styleUrls: ['./app.component.scss'],
-  // styleUrls: ['dz_1.css']
+  /*Для работы ссылок через standAlone нужно импортировать сюда в @Component({  RouterOutlet, RouterLink*/
+  /* И запровайдить маршруты provideRouter(routes) в main.ts bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes)],}).catch((err) => console.error(err));*/
   // imports: [RouterOutlet, RouterLink, HeaderComponent, BredcrumbsComponent, HeaderComponent,ButtonModule,EmojiListComponent,HttpClientModule],
-  // imports: [MainComponent],
   // standalone: true,
 })
 
@@ -51,5 +55,5 @@ export class AppComponent {
 //       // console.log('this.products', this.products);
 //     })
 // }
-
 }
+

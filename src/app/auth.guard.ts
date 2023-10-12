@@ -18,7 +18,9 @@ import {UserService} from "./user.service";
 })
 export class AuthGuard implements CanActivate, CanActivateChild {
   constructor(private userService: UserService) {}
-
+  /*canActivate меняет активацию маршрутизации для текущего маршрута и дочерних
+  * все гварды возвращают true или false или UrlTree - для редиректа на другую страницу
+  * в виде promise или Observable  */
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -29,6 +31,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     | UrlTree {
     return this.userService.isLoggined();
   }
+
 
   canActivateChild(
     route: ActivatedRouteSnapshot,
@@ -60,7 +63,4 @@ export class AuthGuard implements CanActivate, CanActivateChild {
   //   return this.userService.isLoggined();
   // };
 
-// export class AuthGuard  {
-//
-// }
 // }

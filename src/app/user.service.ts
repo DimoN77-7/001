@@ -8,6 +8,7 @@ export class UserService {
   constructor() {}
 
   public isLoggined() {
-    return true;
+    /* canActivate: [AuthGuard] на ЛК -false пускает, true нет */
+    return false;
   }
 }

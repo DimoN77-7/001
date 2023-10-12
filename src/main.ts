@@ -13,101 +13,99 @@ import {map, timer} from "rxjs";
 import { ButtonModule } from 'primeng/button';
 
 
-
-
 export const API_BASE = 'http://194.87.237.48:5000';
 
 // const routes: Routes = [
-  // {
-  //   path: '',
-  //   title: 'Главная',
-  //   children: [
-  //     {
-  //       path: '',
-  //       loadComponent: () =>
-  //         import('./app/pages/main/main.component').then(
-  //           (c) => c.MainComponent
-  //         ),
-  //     },
-  //     {
-  //       path: 'register',
-  //       canActivate: [
-  //         () => false,
-  //         () =>
-  //           timer(2000).pipe(
-  //             map(() => {
-  //               debugger;
-  //               return true;
-  //             })
-  //           ),
-  //       ],
-  //       canDeactivate: [
-  //         (component: RegisterComponent) => {
-  //           if (component.form.dirty) {
-  //             return window.confirm('Вы уверены?');
-  //           } else {
-  //             return true;
-  //           }
-  //         },
-  //       ],
-  //       loadComponent: () =>
-  //         import('./app/pages/register/register.component').then(
-  //           (c) => c.RegisterComponent
-  //         ),
-  //     },
-  //     {
-  //       path: 'lk',
-  //       title: 'Личный кабинет',
-  //       canActivate: [
-  //         (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
-  //           inject(UserService).isLoggined(),
-  //       ],
-  //       loadComponent: () =>
-  //         import('./app/pages/lk/lk.component').then((c) => c.LkComponent),
-  //     },
-  //     {
-  //       path: 'user/:id',
-  //       title: 'Юзер',
-  //       resolve: {
-  //         breadcrumbsLabel: (route: ActivatedRouteSnapshot) =>
-  //           'Игорь ' + route.paramMap.get('id'),
-  //       },
-  //       loadComponent: () =>
-  //         import('./app/pages/lk/lk.component').then((c) => c.LkComponent),
-  //     },
-  //     {
-  //       path: 'ads',
-  //       title: 'Объявления',
-  //       children: [{
-  //         path: '',
-  //         canActivateChild: [AuthGuard],
-  //         loadComponent: () =>
-  //           import('./app/pages/ads/list/list.component').then(
-  //             (c) => c.ListComponent
-  //           ),
-  //         children: [
-  //           {
-  //             path: 'new',
-  //             title: 'Новые',
-  //             loadComponent: () =>
-  //               import('./app/pages/ads/list/new/new.component').then(
-  //                 (c) => c.NewComponent
-  //               ),
-  //           },
-  //           {
-  //             path: 'popular',
-  //             title: 'Популярные',
-  //             loadComponent: () =>
-  //               import('./app/pages/ads/list/popular/popular.component').then(
-  //                 (c) => c.PopularComponent
-  //               ),
-  //           },
-  //         ],
-  //       },
-  //       ],
-  //     },
-  //   ],
-  // },
+//   {
+//     path: '',
+//     title: 'Главная',
+//     children: [
+//       {
+//         path: '',
+//         loadComponent: () =>
+//           import('./app/pages/main/main.component').then(
+//             (c) => c.MainComponent
+//           ),
+//       },
+//       {
+//         path: 'register',
+//         canActivate: [
+//           () => false,
+//           () =>
+//             timer(2000).pipe(
+//               map(() => {
+//                 debugger;
+//                 return true;
+//               })
+//             ),
+//         ],
+//         canDeactivate: [
+//           (component: RegisterComponent) => {
+//             if (component.form.dirty) {
+//               return window.confirm('Вы уверены?');
+//             } else {
+//               return true;
+//             }
+//           },
+//         ],
+//         loadComponent: () =>
+//           import('./app/pages/register/register.component').then(
+//             (c) => c.RegisterComponent
+//           ),
+//       },
+//       {
+//         path: 'lk',
+//         title: 'Личный кабинет',
+//         canActivate: [
+//           (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
+//             inject(UserService).isLoggined(),
+//         ],
+//         loadComponent: () =>
+//           import('./app/pages/lk/lk.component').then((c) => c.LkComponent),
+//       },
+//       {
+//         path: 'user/:id',
+//         title: 'Юзер',
+//         resolve: {
+//           breadcrumbsLabel: (route: ActivatedRouteSnapshot) =>
+//             'Игорь ' + route.paramMap.get('id'),
+//         },
+//         loadComponent: () =>
+//           import('./app/pages/lk/lk.component').then((c) => c.LkComponent),
+//       },
+//       {
+//         path: 'ads',
+//         title: 'Объявления',
+//         children: [{
+//           path: '',
+//           canActivateChild: [AuthGuard],
+//           loadComponent: () =>
+//             import('./app/pages/ads/list/list.component').then(
+//               (c) => c.ListComponent
+//             ),
+//           children: [
+//             {
+//               path: 'new',
+//               title: 'Новые',
+//               loadComponent: () =>
+//                 import('./app/pages/ads/list/new/new.component').then(
+//                   (c) => c.NewComponent
+//                 ),
+//             },
+//             {
+//               path: 'popular',
+//               title: 'Популярные',
+//               loadComponent: () =>
+//                 import('./app/pages/ads/list/popular/popular.component').then(
+//                   (c) => c.PopularComponent
+//                 ),
+//             },
+//           ],
+//         },
+//         ],
+//       },
+//     ],
+//   },
 
 
   // {
@@ -377,3 +375,11 @@ export const API_BASE = 'http://194.87.237.48:5000';
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+/* При переходе на систему standAlone , в main.ts убираем AppModule,
+*  и вместо platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+  * вставляем  // bootstrapApplication(AppComponent, {
+//   providers: [provideRouter(routes)],
+// }).catch((err) => console.error(err));
+* LoadChildren -> LoadComponent
+*  */
