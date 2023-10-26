@@ -8,3 +8,59 @@
 //  background-color: #cccccc;
 //}
 
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+html,
+select,
+input,
+a {
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+}
+//button {
+//  font-family: "Inter", sans-serif;
+//  background-color: transparent;
+//  border: none;
+//}
+
+.MainBtn {
+  /* дополнительный класс к синим кнопкам */
+  display: flex;
+  padding: 6px 12px 6px 12px;
+  align-items: center;
+  color: white;
+  background-color: #3b82f6; /* #f4c430 */
+  border-radius: 4px;
+  transition: transform 0.3s;
+  &:hover {
+    box-shadow: inset 0px 0px 10px rgba(30, 41, 59, 1);
+  }
+}
+.MainInput {
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 16px;
+  &::placeholder {
+    color: #64748b;
+  }
+  &:hover {
+    box-shadow: inset 0px 0px 10px #3b82f6;
+  }
+  &:focus {
+    box-shadow: inset 0px 0px 10px #3b82f6;
+    outline-color: #3b82f6;
+  }
+}
+
+//.container {
+//  max-width: 1326px;
+//  margin: auto;
+//  padding-left: 15px;
+//  padding-right: 15px;
+//}
+
+

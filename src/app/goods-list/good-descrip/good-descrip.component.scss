@@ -1,0 +1,134 @@
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+.breadCrumbs {
+  height: 24px;
+  width: 100%;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 24px;
+}
+.productInfo {
+  display: flex;
+}
+.LeftTitle {
+  display: flex;
+  flex-direction: column;
+  height: 665px;
+  width: 856px;
+  margin-right: 24px;
+  justify-content: center;
+  & .title {
+    display: flex;
+    height: 36px;
+    margin-top: 8px;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  & .titleImg {
+    width: 856px;
+    height: 512px;
+    margin: 16px 0 24px 0;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.03, 1.03);
+      }
+    }
+  }
+}
+.images {
+  display: flex;
+  gap: 12px;
+
+  & .image {
+    width: 120px;
+    height: 84px;
+    border-radius: 4px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
+
+.cost {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.phoneNumber {
+  width: 416px;
+  height: 68px;
+  margin-bottom: 40px;
+  padding: 20px 50px 20px 59px;
+  gap: 12px;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  &:hover {
+    color: greenyellow;
+  }
+}
+
+.adress {
+  width: auto;
+  height: 92px;
+  margin-bottom: 32px;
+  & .adressTitle {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  & .adressData {
+    margin-bottom: 4px;
+    line-height: 24px;
+  }
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3b82f6;
+    line-height: 24px;
+    &svg {
+      fill: currentColor;
+    }
+    &:hover {
+      color: purple;
+    }
+  }
+}
+.description {
+  display: flex;
+  width: auto;
+  height: 348px;
+  flex-direction: column;
+  gap: 8px;
+  & .descriptionTitle {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  & .descriptionData {
+    height: 352px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

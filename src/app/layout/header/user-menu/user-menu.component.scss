@@ -1,0 +1,48 @@
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  .svg__person {
+    margin-right: 4px;
+  }
+  & svg {
+    fill: currentColor;
+  }
+  &:hover {
+    color: greenyellow;
+  }
+}
+.UserMenu {
+  width: 147px;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 35px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+  gap: 16px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: -5px 5px 5px rgba(30, 41, 59, 0.3),
+    5px 5px 5px rgba(30, 41, 59, 0.3), 0px 5px 5px rgba(30, 41, 59, 0.3);
+  & a {
+    font-size: 14px;
+    &:hover {
+      color: rgb(163, 26, 163);
+      text-decoration: underline;
+    }
+  }
+  & button {
+    position: relative;
+    right: -6px;
+    color: #ef4444;
+    font-size: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

@@ -1,18 +1,3 @@
-//:root {
-//  --light: rgba(30, 41, 59, 1);
-//  --backgroundBtn: rgba(59, 130, 246, 1);
-//  --whiteCOLOR: #FFF;
-//  --title_block_with_cards: #1E293B
-//}
-//
-//.header {
-//  width: 100%;
-//  //height: 136px;
-//  height: 52px;
-//  border-bottom: 1px solid #E2E8F0;
-//  //background: var(--whiteCOLOR);
-//  background: var(--light-text-default-text, #1E293B);
-//}
 
 @media (max-width: 1299.98px) {
   .container {
@@ -75,16 +60,86 @@
     gap: 8px;
   }
 
-  .image_card {
-    width: 100%;
-    height: auto;
-  }
 }
 @media (max-width: 463.98px) {
   .header {
     height: 225px;
   }
 }
+
+.card-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+//.card {
+//  width: 306px;
+//  height: 368px;
+//  border-radius: 4px;
+//  padding: 20px; /* Расстояние от картинки до рамки */
+//  float: left;
+//  background: #666; /* Цвет фона */
+//  margin-right: 10px; /* Отступ справа */
+//  margin-bottom: 10px; /* Отступ снизу */
+//  //border: 2px solid #55c5e9;
+//  display:flex;
+//  flex-wrap:wrap;
+//  //height: 306px;
+//  //width: 336px;
+//  //flex: 1 0 auto;
+//  //position: relative;
+//  //overflow: hidden;
+//}
+//
+//.card-name{
+//position: relative;
+//  //margin-top: 20px;
+//  //margin-left: 5px;
+//  height: 2px;
+//  font-size: 18px;
+//  font-weight: 600;
+//  color: #3b82f6;
+//}
+//.card-cost {
+//  height: 24px;
+//  font-size: 18px;
+//  font-weight: 600;
+//  color: #1e293b;
+//}
+//.card-location {
+//  display: flex;
+//  height: 20px;
+//  font-size: 14px;
+//  font-weight: 400;
+//  color: #64748b;
+//}
+//.card-date {
+//  height: 20px;
+//  font-size: 14px;
+//  font-weight: 400;
+//  color: #64748b;
+//}
+//
+//  .image_card {
+//    width: 306px;
+//    height: 240px;
+//    margin-bottom: 8px;
+//    border-radius: 4px;
+//    overflow: hidden;
+//    .img{
+//      width: 100%;
+//      height: 100%;
+//      transition: transform 0.3s;
+//      object-fit: cover;
+//    }
+//
+//  }
+
+
+
+
+
+
 
 
 

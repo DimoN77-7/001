@@ -10,7 +10,7 @@ import {RegisterComponent} from "./app/pages/register/register.component";
 import {HeaderComponent} from "./app/layout/header/header.component";
 import {map, timer} from "rxjs";
 // import {window} from "rxjs";
-import { ButtonModule } from 'primeng/button';
+
 
 
 export const API_BASE = 'http://194.87.237.48:5000';

@@ -6,7 +6,7 @@ import {CommonModule} from "@angular/common";
   templateUrl: './popular.component.html',
   styleUrls: ['./popular.component.scss'],
   // imports:[CommonModule],
-  // standalone: true,
+  standalone: true,
 })
 export class PopularComponent {
 

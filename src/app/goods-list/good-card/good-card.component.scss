@@ -1,0 +1,58 @@
+//.image_card {
+//  width: 306px;
+//  height: 240px;
+//  margin-bottom: 8px;
+//  border-radius: 4px;
+//  overflow: hidden;
+//  .img{
+//    width: 100%;
+//    height: 100%;
+//    transition: transform 0.3s;
+//    object-fit: cover;
+//  }
+//}
+
+.image_card {
+  width: 306px;
+  height: 240px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  & img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+.name {
+  height: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3b82f6;
+  &:hover {
+    color: rgb(163, 26, 163);
+    text-decoration: underline;
+  }
+}
+.cost {
+  height: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+.location {
+  height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+}
+.date {
+  height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+}
+

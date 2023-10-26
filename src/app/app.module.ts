@@ -8,16 +8,26 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { CompanyComponent } from './company/company.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-// import { MainComponent } from './pages/main/main.component';
 import { BodyComponent } from './body/body.component';
 import {EmojiListComponent} from './shared/components/emoji-list/emoji-list.component'
 import {ErrorInterceptor} from "./shared/error-interceptor";
-import {AuthInterceptor} from "./shared/auth-interceptor";
+import { CustomInerceptor} from "./shared/auth-interceptor";
 import { BredcrumbsComponent } from './components/bredcrumbs/bredcrumbs.component';
-import {NewComponent} from "./pages/ads/list/new/new.component";
-import {PopularComponent} from "./pages/ads/list/popular/popular.component";
-import {ListComponent} from "./pages/ads/list/list.component";
-// import {CardComponent} from "./pages/ads/card/card.component";
+import {FormsModule} from "@angular/forms";
+import { RegWindowComponent } from './layout/header/reg-window/reg-window.component';
+import {UserMenuComponent} from "./layout/header/user-menu/user-menu.component";
+import {SearchInputComponent} from "./layout/header/header-bottom/search-input/search-input.component";
+import {HeaderBottomComponent} from "./layout/header/header-bottom/header-bottom.component";
+import {CategoriesListComponent} from "./layout/header/header-bottom/categories-list/categories-list.component";
+import { GoodsListComponent } from './goods-list/goods-list.component';
+import { GoodCardComponent } from './goods-list/good-card/good-card.component';
+import {RouterModule} from "@angular/router";
+// import { GoodDescripComponent } from './goods-list/good-descrip/good-descrip.component';
+
+
+
+
+
 
 
 
@@ -29,19 +39,28 @@ import {ListComponent} from "./pages/ads/list/list.component";
     CompanyComponent,
     HeaderComponent,
     FooterComponent,
-    // MainComponent,
     BodyComponent,
     BredcrumbsComponent,
     EmojiListComponent,
-    ListComponent,
-    // NewComponent,
-    // PopularComponent,
-    // CardComponent
+    RegWindowComponent,
+    UserMenuComponent,
+    HeaderBottomComponent,
+    SearchInputComponent,
+    CategoriesListComponent,
+    GoodsListComponent,
+    GoodCardComponent,
+    // GoodDescripComponent,
+    // FormsModule,
+    // ButtonModule
+    // ModalComponent,
+    // RegWindowComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule
   ],
   providers: [
     {
@@ -51,7 +70,8 @@ import {ListComponent} from "./pages/ads/list/list.component";
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
+      useClass: CustomInerceptor,
+      // useClass: AuthInterceptor,
       multi: true
     }
   ],

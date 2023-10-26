@@ -10,23 +10,76 @@
 <br />
 <a routerLink="/ads/123">card</a>
 <br />
-<!--<a routerLink="/register">Регистрация</a>-->
-<!--<br />-->
+<a routerLink="/register">Регистрация</a>
+<br />
+<!--<a routerLink="/good-descrip">Карточка</a>-->
+<br />
 <!--<div class="card flex justify-content-center">-->
 <!--  <p-button label="Check" icon="pi pi-check"></p-button>-->
 <!--</div>-->
-<!--<a routerLink="/user/1234">ЛК</a>-->
+<a routerLink="/user/1234">ЛК</a>
 <!--<a routerLink="/ads/123?guid=asdasda2-asdas24">card</a>-->
 <!--<br />-->
-<button (click)="goToCard()">card</button>
+<!--<button (click)="goToCard()">card</button>-->
 <!--<app-main></app-main>-->
 <router-outlet></router-outlet>
+<app-goods-list></app-goods-list>
+<!--<app-modal>-->
+<!--  <app-reg-window></app-reg-window>-->
+<!--</app-modal>-->
 
 <!--<app-main></app-main>-->
 <!--<app-body></app-body>-->
 <!--<app-footer></app-footer>-->
 
+<!--User name: <input type="text" [(ngModel)]="userName">-->
+<!-- <button (click)="search()">Search</button>-->
 
+<!--<div *ngIf="response">-->
+<!--div *ngFor="let advert in adverts"-->
+<!--p {{advert.name}}-->
+<!--img src="srcCreator(advert.images[0])"-->
+<!--<div *ngIf="adverts">-->
+<!--<div *ngFor="let advert of adverts">-->
+
+<!--<app-goods-list>-->
+<!--  <app-good-card>-->
+<!--  </app-good-card>-->
+<!--</app-goods-list>-->
+<!--<div class ="card_list">-->
+<!--  <div  *ngFor="let advert of adverts">-->
+
+<!--    <div class="card">-->
+<!--          <div class="image_card">-->
+<!--            <img class="img" [src]="imageSrcCreator(advert.imagesIds[0])" alt="">-->
+<!--          </div>-->
+<!--          <div class="card-name">{{advert.name}}</div>-->
+<!--          <p class="card-cost">{{advert.cost}}</p>-->
+<!--      <p class="card-location">{{advert.location}}</p>-->
+<!--&lt;!&ndash;      <div class="card-title"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p> Цена :{{advert.cost}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="card-description"> Описание :{{advert.description}}</div>&ndash;&gt;-->
+
+
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+<!--</div>-->
+
+<!--<div *ngIf="response">-->
+<!--  <p>   {{response}}</p>-->
+<!--  <img src="{{response.imagesIds }}" alt="">-->
+<!--  <p>Имя: {{response.name}}</p>-->
+<!--  <p>Цена: {{response.cost}}</p>-->
+<!--  <p>Описание: {{response.description}}</p>-->
+<!--  <p>Тел: {{response.phone}}</p>-->
+<!--</div>-->
 
 
 

@@ -9,6 +9,6 @@ export class UserService {
 
   public isLoggined() {
     /* canActivate: [AuthGuard] на ЛК -false пускает, true нет */
-    return false;
+    return true;
   }
 }

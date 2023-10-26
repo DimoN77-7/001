@@ -1,5 +1,4 @@
 
-
 export interface Advert {
   id: number;
   // user: User;

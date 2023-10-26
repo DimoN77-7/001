@@ -1,0 +1,254 @@
+.login-btn {
+  border: medium none;
+  background-image: none;
+  background: transparent;
+  float: left;
+  padding: 6px 12px;
+  font-size: 14px;
+  //background-color: transparent;
+  //display: flex;
+  //align-items: center;
+  border-radius: 4px;
+  gap: 8px;
+  color: white;
+  //& svg {
+  //  background: blue;
+  //  color: white;
+  //  //fill: currentColor;
+  //}
+  &:hover {
+    background: blue;
+    color: white;
+  }
+
+}
+.authWindow {
+  width: 416px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  //top: 40px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: -5px 5px 5px rgba(30, 41, 59, 0.3),
+  5px 5px 5px rgba(30, 41, 59, 0.3), 0px 5px 5px rgba(30, 41, 59, 0.3);
+
+  .auth-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    & div {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+  }
+}
+.closeWindow {
+  width: 24px;
+  height: 24px;
+  & svg {
+    fill: currentColor;
+    &:hover {
+      color: #ef4444;
+    }
+  }
+}
+
+.__name {
+  width: 368px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+.__phoneNumber {
+  width: 368px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+.__password {
+  width: 368px;
+  height: 48px;
+}
+
+.underPasswordWrapper {
+  display: flex;
+  margin-top: 8px;
+  justify-content: space-between;
+  align-items: center;
+  & .notRememberBtn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -6px;
+    color: #1e293b;
+    gap: 8px;
+    font-size: 16px;
+    & svg {
+      stroke: #cbd5e1;
+      &:hover {
+        stroke: #3b82f6;
+      }
+    }
+    & p {
+      &:hover {
+        color: currentColor;
+      }
+    }
+  }
+  & .rememberMeBtn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -6px;
+    gap: 8px;
+    color: #1e293b;
+    font-size: 16px;
+  }
+  & a {
+    color: #3b82f6;
+    &:hover {
+      color: rgb(163, 26, 163);
+    }
+  }
+}
+.enterBtn {
+  width: 127px;
+  height: 48px;
+  margin-top: 24px;
+  padding: 12px 40px;
+  align-self: center;
+  font-size: 16px;
+}
+.register {
+  margin-top: 20px;
+  color: #3b82f6;
+  font-size: 16px;
+  &:hover {
+    color: rgb(163, 26, 163);
+  }
+}
+.registerBtn {
+  width: 127px;
+  height: 48px;
+  margin-top: 24px;
+  padding: 12px 12px;
+  align-self: center;
+  font-size: 16px;
+}
+
+//.container {
+//  max-width: 1296px;
+//  margin: auto;
+//}
+
+//.header_top {
+//  width: 100%;
+//  height: 52px;
+//  margin-bottom: 24px;
+//  background: var(--light);
+//}
+
+//.header_top_content {
+//  display: flex;
+//  flex-direction: row-reverse;
+//  padding: 8px 0 8px 0;
+//  height: 36px;
+//}
+
+//.header_top_btn {
+//  display: flex;
+//  flex-direction: row;
+//  width: 473px;
+//  height: 36px;
+//  gap: 24px;
+//  color: #FFFFFF;
+//}
+
+.header_top_connect {
+  display: flex;
+  align-items: center;
+  //width: 90px;
+  //height: 36px;
+  padding: 8px 0px 8px 0px;
+  gap: 8px;
+  border-radius: 4px;
+  border: none;
+  background: var(--light);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-style: normal;
+  color: var(--whiteCOLOR);
+}
+
+.header_top_connect svg {
+  color: white;
+  fill: currentColor;
+}
+
+.header_top_connect:hover {
+  color: red;
+
+}
+
+
+.header_top_NEWadvertisement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: var(--backgroundBtn);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-style: normal;
+  color: var(--whiteCOLOR);
+}
+
+.header_top_btn:hover, .header_top_btn svg:hover {
+  background: blue;
+  color: white;
+}
+
+.header_top_NEWadvertisement svg {
+  fill: currentColor;
+}
+
+.header_bottom {
+  width: 100%;
+  height: 36px;
+  gap: 24px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.container_header_bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.header_bottom_title {
+  color: var(--light);
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  //font-weight: 700;
+  //line-height: 36px;
+line-height: 0px;
+}

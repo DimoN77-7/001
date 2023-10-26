@@ -4,64 +4,74 @@ import { MainComponent } from './pages/main/main.component';
 import { LkComponent } from './pages/lk/lk.component';
 import {AuthGuard} from "./auth.guard";
 import {UserService} from "./user.service";
+import {RegisterComponent} from "./pages/register/register.component";
+import {ButtonModule} from "primeng/button";
+import {map, timer} from "rxjs";
+
+
+
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   title: 'Главная',
-  //   children: [
-  //     {
-  //       path: '',
-  //       loadChildren: () =>
-  //         import('./pages/main/main.module').then(
-  //           (c) => c.MainModule),
-  //     },
-  //     // {
-  //     //   path: 'register',
-  //     //   canActivate: [
-  //     //     () => false,
-  //     //     () =>
-  //     //       timer(2000).pipe(
-  //     //         map(() => {
-  //     //           debugger;
-  //     //           return true;
-  //     //         })
-  //     //       ),
-  //     //   ],
-  //     //   canDeactivate: [
-  //     //     (component: RegisterComponent) => {
-  //     //       if (component.form.dirty) {
-  //     //         return window.confirm('Вы уверены?');
-  //     //       } else {
-  //     //         return true;
-  //     //       }
-  //     //     },
-  //     //   ],
-  //     //   loadComponent: () =>
-  //     //     import('./app/pages/register/register.component').then(
-  //     //       (c) => c.RegisterComponent
-  //     //     ),
-  //     // },
-  //     {
-  //       path: 'lk',
-  //       title: 'Личный кабинет',
-  //       canActivate: [
-  //         (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
-  //           inject(UserService).isLoggined(),
-  //       ],
-  //       loadChildren: () =>
-  //         import('./pages/lk/lk.module').then((c) => c.LkModule),
-  //     },
-  //     {
-  //       path: 'user/:id',
-  //       title: 'Юзер',
-  //       resolve: {
-  //         breadcrumbsLabel: (route: ActivatedRouteSnapshot) =>
-  //           'Дмитрий' + route.paramMap.get('id'),
-  //       },
-  //       loadChildren: () =>
-  //         import('./pages/lk/lk.module').then((c) => c.LkModule),
-  //     },
+  {
+    path: '',
+    title: 'Главная',
+    children: [
+      {
+        path: '',
+              loadChildren: () =>
+          import('./pages/main/main.module').then(
+            (c) => c.MainModule),
+      },
+
+      {
+        path: 'register',
+        /*я  так и не понял как работает этот блок*/
+        // canActivate: [
+        //   () => false,
+        //   () =>
+        //     timer(2000).pipe(
+        //       map(() => {
+        //         console.log('2sec');
+        //         debugger;
+        //         return true;
+        //       })
+        //     ),
+        // ],
+        canDeactivate: [
+          // (component: RegisterComponent) => {
+          //   if (component.form.dirty) {
+          //     return window.confirm('Вы уверены?');
+          //   } else {
+          //     return true;
+          //   }
+          // },
+        ],
+        loadComponent: () =>
+          import('./pages/register/register.component').then(
+            (c) => c.RegisterComponent
+          ),
+      },
+      {
+        path: 'lk',
+        title: 'Личный кабинет',
+        canActivate: [
+          (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
+            inject(UserService).isLoggined(),
+        ],
+        loadChildren: () =>
+          import('./pages/lk/lk.module').then((c) => c.LkModule),
+      },
+      {
+        path: 'user/:id',
+        title: 'Юзер',
+      /*resolve суть как у ГВАРДОВ, но он нам ничего не запрещает и позволяет передать разные данные и действия перед загруской */
+        resolve: {
+          breadcrumbsLabel: (route: ActivatedRouteSnapshot) =>
+            'Дмитрий' + route.paramMap.get('id'),
+        },
+        loadChildren: () =>
+          import('./pages/lk/lk.module').then((c) => c.LkModule),
+      },
   //     {
   //       path: 'ads',
   //       title: 'Объявления',
@@ -97,25 +107,25 @@ const routes: Routes = [
 
 
 
-  {
-    path: '',
-    title: 'Главная',
+  // {
+  //   path: '',
+  //   title: 'Главная',
     // redirectTo: 'main',
     /*pathMatch нужен для указания соответсвия маршрута */
     // pathMatch: 'full',
   // pathMatch: 'prefix',
   // },
-    children: [
-  {
-     path: '',
-    // path: 'main',
-    // title: 'Главная',
-    loadChildren: () =>
-      import('./pages/main/main.module').then((m) => m.MainModule),
-    /*StandAlone loadChildren -> loadComponent и MainModule ->MainComponent */
-  },
-      // {
-      //   path: 'register',
+  //   children: [
+  // {
+  //    path: '',
+  //   // path: 'main',
+  //   // title: 'Главная',
+  //   loadChildren: () =>
+  //     import('./pages/main/main.module').then((m) => m.MainModule),
+  //   /*StandAlone loadChildren -> loadComponent и MainModule ->MainComponent */
+  // },
+  //     {
+  //       path: 'register',
       //   canActivate: [
       //     () => false,
       //     () =>
@@ -136,20 +146,33 @@ const routes: Routes = [
       //     },
       //   ],
       //   loadComponent: () =>
-      //     import('./app/pages/register/register.component').then(
+      //     import('./pages/register/register.component').then(
       //       (c) => c.RegisterComponent
       //     ),
       // },
 
-      {
-    path: 'lk',
-        title: 'Личный кабинет',
-        canActivate: [(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
-          inject(UserService).isLoggined(),],
-    // canMatch: [() => false],
-    loadChildren: () =>
-      import('./pages/lk/lk.module').then((m) => m.LkModule),
-  },
+  //     {
+  //   path: 'lk',
+  //       title: 'Личный кабинет',
+  //       /*canLoad актуально тольк для модульной маршрутизации, c standAlone компонент canActivate: тоже не будет подргужаться */
+  //       /*canMatch:[()=> false], аналог  canLoad ,  отличие в работе canMatch ищет любой другой подходящий маршрут */
+  //       canMatch:[()=> false],
+  //       // canLoad: [()=> false],
+  //       // canActivate: [()=> false],
+  //       // canActivate:[AuthGuard],
+  //       // canActivate: [(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
+  //       //   inject(UserService).isLoggined(),],
+  //   // canMatch: [() => false],
+  //   loadChildren: () =>
+  //     import('./pages/lk/lk.module').then((m) => m.LkModule),
+  // },
+      /*Пример загрузки для canLoad,canActivate: */
+      // {
+      //   path: '**',
+      //   loadChildren: () =>
+      //     import('./pages/main/main.module').then(
+      //       (c) => c.MainModule),
+      // },
   {
     path: 'ads',
     title: 'Обьявления',
@@ -157,9 +180,10 @@ const routes: Routes = [
       {
         path: '',
         canActivateChild: [AuthGuard],
-        loadComponent: () => import('./pages/ads/list/list.component').then(
-          (m) => m.ListComponent),
-        children: [
+        loadChildren: () => import('./pages/ads/list/list.module').then(
+          (m) => m.ListModule),
+        // children: [
+      },
           {
             path: 'new',
             title: 'Новые',
@@ -174,7 +198,7 @@ const routes: Routes = [
               import('./pages/ads/list/popular/popular.component').then(
                 (c) => c.PopularComponent),
           },
-        ],
+        // ],
         // children: [
         //   {
         //     path: 'new',
@@ -191,7 +215,7 @@ const routes: Routes = [
         //         (c) => c.PopularComponent),
         //   },
         // ],
-      },
+      // },
   // {
   //   path: 'new',
   //   title: 'Новые',
@@ -215,6 +239,13 @@ const routes: Routes = [
       //   // data: { description: 'Карточка чего-то там',},
       // }
 },
+      {
+        path: 'good-descrip',
+        title: 'Описание',
+        loadComponent: () =>
+          import('./goods-list/good-descrip/good-descrip.component').then(
+            (c) => c.GoodDescripComponent),
+      },
     ],
   },
   ]

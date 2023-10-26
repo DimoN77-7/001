@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-// import {SwaggerService} from "../../service/swagger.service";
-// import {HttpClient} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
+import {SwaggerService} from "../../service/swagger.service";
 
 @Component({
   selector: 'app-main',
@@ -12,18 +12,20 @@ export class MainComponent {
 
 }
 // export class MainComponent implements OnInit {
-//   // public mainComponent!: Components[];
-//   // private httpClient: HttpClient;
-//   // public  swaggerService: SwaggerService;
-//   // constructor(_http: HttpClient) {
-//   //   this.httpClient = _http;
-//   // }
-//   // ngOnInit(): void {
-//    this.swaggerService.getAdverts().subscribe(data =>
-//      this.data = data;
-//     console.log(data);
+// //   // public mainComponent!: Components[];
+// //   // private httpClient: HttpClient;
+// //   public  swaggerService: SwaggerService;
+//   constructor(_http: HttpClient) {
+//     this.httpClient = _http;
+//   }
+//   ngOnInit(): void {
+//    this.swaggerService.getAdverts().subscribe((data) => {
+//        this.data = data;
+//        console.log(data);
+//    }
+//
 //    )
-//  // }
+//  }
 //
 // }
 

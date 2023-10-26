@@ -1,0 +1,17 @@
+.input {
+  width: 100%;
+  padding: 7px 12px 7px 12px;
+  border-radius: 4px 0px 0px 4px;
+}
+.searchBtn {
+  display: flex;
+  width: 91px;
+  height: 36px;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-color: transparent;
+  color: white;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
