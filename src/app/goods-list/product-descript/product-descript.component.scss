@@ -1,4 +1,4 @@
-.flexContainer {
+.container_product_descript {
   display: flex;
   flex-direction: column;
 }
@@ -10,9 +10,10 @@
   line-height: 24px;
 }
 .productInfo {
+  margin-left: 311px;
   display: flex;
 }
-.LeftTitle {
+.upTitle {
   display: flex;
   flex-direction: column;
   height: 665px;
@@ -61,7 +62,6 @@
     }
   }
 }
-
 .cost {
   display: flex;
   height: 35px;

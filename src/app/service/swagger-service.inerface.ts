@@ -11,5 +11,6 @@ export interface Advert {
   phone: string;
   location: string;
   created: string;
+  createdAt: Date;
   // category: Category;
 }

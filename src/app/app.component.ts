@@ -84,10 +84,10 @@ export class AppComponent {
 
   // /* чтобы отправить из компонента нужен сервис Router */
   //  constructor(private router: Router) {}
-  // /* goToCard() - метод, navigateByUrl- метод для нашего сервиса  */
-  //  goToCard() {
-  //   this.route.navigateByUrl('/ads/123?guid=РАБОТАЕТ');
-  //  }
+  /* goToCard() - метод, navigateByUrl- метод для нашего сервиса  */
+   goToCard() {
+    this.route.navigateByUrl('/ads/123?guid=РАБОТАЕТ');
+   }
 
   // products: Daum[] = []
   // companys: Daum[] = []

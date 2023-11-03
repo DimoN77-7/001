@@ -11,8 +11,9 @@ export class CustomInerceptor implements HttpInterceptor {
     // debugger
     const localToken = localStorage.getItem('token');
         req = req.clone({ headers: req.headers.set('Authorization',  'bearer ' + localToken)});
-    return next.handle(req);
     console.log('req', req);
+    return next.handle(req);
+
 }
 }
 

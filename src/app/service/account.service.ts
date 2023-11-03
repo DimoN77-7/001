@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {API_BASE} from "../../main";
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,16 @@ export class AccountService {
 
 
   onLogin(obj: any): Observable<any> {
-    return this.http.post('http://194.87.237.48:5000/Auth/Login', obj);
+    return this.http.post(`${API_BASE}/Auth/Login`, obj);
     // return  http.post('http://194.87.237.48:5000/Auth/Register',obj);
   }
 
-  getCustomers(): Observable<any>{
-    // debugger
-    // return this.http.get("http://194.87.237.48:5000/Advert/search");
-    return this.http.get("http://localhost:40392/api/Master/GetAllCustomer");
+  goRegister(obj: any): Observable<any> {
+    return this.http.post<any>(`${API_BASE}/Auth/Register`, obj);
   }
+
+
+
 }
 
 

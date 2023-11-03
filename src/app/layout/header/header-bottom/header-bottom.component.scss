@@ -5,6 +5,7 @@
   align-items: center;
 }
 .header-bottom-title {
+  text-decoration: none;
   //pading-top: 0;
   display: flex;
   //width: 284px;
@@ -22,7 +23,7 @@
   line-height: 0px;
 
 }
-.app-categories-list {
+app-categories-list {
   display: flex;
   width: 152px;
   height: 36px;
@@ -37,7 +38,7 @@
     box-shadow: inset 0px 0px 10px rgba(30, 41, 59, 0.6);
   }
 }
-.app-search-input {
+app-search-input {
   display: flex;
   width: 825px;
 }

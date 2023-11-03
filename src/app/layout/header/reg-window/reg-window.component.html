@@ -53,6 +53,7 @@
       type="text"
       (change)="setName($event)"
       placeholder="Имя"
+      [(ngModel)]="signupObj.name"
     />
   </ng-container>
   <input
@@ -60,12 +61,16 @@
     type="text"
     placeholder="Номер телефона"
     (change)="setPhoneNumber($event)"
+    [(ngModel)]="signupObj.login"
+    [(ngModel)]="loginObj.login"
   />
   <input
     class="__password MainInput"
     type="text"
     placeholder="Пароль"
     (change)="setPassword($event)"
+    [(ngModel)]="signupObj.password"
+    [(ngModel)]="loginObj.password"
   />
   <div class="underPasswordWrapper" *ngIf="isRegistration === false">
     <button
@@ -118,11 +123,14 @@
     class="enterBtn MainBtn"
     *ngIf="isRegistration === false; else registerBtnTemplate"
     (click)="submitLogIn()"
+    (click)="onLogin()"
   >
+<!--    (click)="onLogin()"-->
+<!--    (click)="onSignUp()"-->
     Войти
   </button>
   <ng-template #registerBtnTemplate>
-    <button class="registerBtn MainBtn" (click)="submitRegistration()">
+    <button class="registerBtn MainBtn" (click)="submitRegistration()"     (click)="goRegister()" >
       Регистрация
     </button>
   </ng-template>

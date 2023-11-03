@@ -10,7 +10,6 @@ import {map, timer} from "rxjs";
 
 
 
-
 const routes: Routes = [
   {
     path: '',
@@ -22,7 +21,6 @@ const routes: Routes = [
           import('./pages/main/main.module').then(
             (c) => c.MainModule),
       },
-
       {
         path: 'register',
         /*я  так и не понял как работает этот блок*/
@@ -230,6 +228,14 @@ const routes: Routes = [
   //     import('./pages/ads/list/popular/popular.component').then(
   //       (c) => c.PopularComponent),
   // },
+
+      // {
+      //   path: ':id',
+      //   title: 'Карточка',
+      //   loadChildren: () =>
+      //     import('./pages/ads/card/card.module').then((m) => m.CardModule),
+      //   // data: { description: 'Карточка чего-то там',},
+      // }
 ],
       // {
       //   path: ':id',
@@ -239,13 +245,38 @@ const routes: Routes = [
       //   // data: { description: 'Карточка чего-то там',},
       // }
 },
-      {
-        path: 'good-descrip',
-        title: 'Описание',
-        loadComponent: () =>
-          import('./goods-list/good-descrip/good-descrip.component').then(
-            (c) => c.GoodDescripComponent),
-      },
+      // {
+      //   path: 'good-descrip',
+      //   title: 'Описание',
+      //   loadComponent: () =>
+      //     import('./goods-list/good-descrip/good-descrip.component').then(
+      //       (c) => c.GoodDescripComponent),
+      // },
+      // {
+      //   path: 'product-descript',
+      //   // children: [
+      //   //   {
+      //   //     path: ':id',
+      //       title: 'Карточка2',
+      //       loadChildren: () =>
+      //         import('./goods-list/product-descript/product-descript.module').then(
+      //           (c) => c.ProductDescriptModule),
+      //       data: { description: 'Карточка чего-то там',},
+      //   //   }
+      //   // ],
+      // },
+    ],
+  },
+  {
+    path: 'product-descript',
+    children: [{
+      path: ':id',
+      title: 'Карточка2',
+    loadChildren: () =>
+      import('./goods-list/product-descript/product-descript.module').then(
+        (c) => c.ProductDescriptModule),
+    // data: { description: 'Карточка чего-то там',},
+      }
     ],
   },
   ]

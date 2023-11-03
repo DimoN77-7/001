@@ -3,7 +3,6 @@ import {API_BASE} from "../../../main";
 import {Advert} from "../../service/swagger-service.inerface";
 import {ActivatedRoute, Router} from "@angular/router";
 
-
 @Component({
   selector: 'app-good-card',
   templateUrl: './good-card.component.html',
@@ -11,17 +10,15 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class GoodCardComponent  implements OnInit{
   @Input()advert: Advert;
-
+  public link: string;
 // adverts:any;
-
-
 
   constructor(private router: Router, private route: ActivatedRoute) {
 
   }
 
   redirectToProductDetails(id: number) {
-    this.router.navigate(['/good-descrip', id]);
+    this.router.navigate(['/product-descript', id]);
     console.log(ActivatedRoute);
   }
 // this.images = this.advert.imagesIds.map(id => imageSrcCreator(id));
@@ -32,8 +29,8 @@ imageSrcCreator(id:string) : string {
   console.log(src)
   }
   ngOnInit() {
-    this.link =`good-descript${this.advert.id}`
+    this.link =`/product-descript/${this.advert.id}`
+    // console.log(this.link)
   }
-
   }
 

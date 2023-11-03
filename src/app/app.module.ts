@@ -22,14 +22,8 @@ import {CategoriesListComponent} from "./layout/header/header-bottom/categories-
 import { GoodsListComponent } from './goods-list/goods-list.component';
 import { GoodCardComponent } from './goods-list/good-card/good-card.component';
 import {RouterModule} from "@angular/router";
+
 // import { GoodDescripComponent } from './goods-list/good-descrip/good-descrip.component';
-
-
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -47,8 +41,8 @@ import {RouterModule} from "@angular/router";
     HeaderBottomComponent,
     SearchInputComponent,
     CategoriesListComponent,
-    GoodsListComponent,
-    GoodCardComponent,
+    // GoodsListComponent,
+    // GoodCardComponent,
     // GoodDescripComponent,
     // FormsModule,
     // ButtonModule
@@ -60,7 +54,8 @@ import {RouterModule} from "@angular/router";
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+
   ],
   providers: [
     {

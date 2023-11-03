@@ -36,7 +36,7 @@
   color: white;
 }
 
-/* Адаптивчик */
+/* Адаптив */
 @media (max-width: 1326px) {
   .header-top-FlexContainer {
     max-width: 966px;
@@ -158,6 +158,7 @@
 }
 
 .container_header_bottom {
+  margin-top: 24px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -165,6 +166,7 @@
 }
 
 .header_bottom_title {
+  padding-right: 24px;
   color: var(--light);
   font-family: "Inter", sans-serif;
   font-size: 30px;

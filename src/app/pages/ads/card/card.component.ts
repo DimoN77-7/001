@@ -24,10 +24,10 @@ export class CardComponent {
   /*Для вытаскивания параметров из url -> activatedRoute */
   constructor(private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe((r) => {
-      debugger;
+      // debugger;
     } );
     this.activatedRoute.queryParams.subscribe((r) => {
-      debugger;
+      // debugger;
     } );
   }
 }

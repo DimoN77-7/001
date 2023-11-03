@@ -1,13 +1,29 @@
 import {Component, Input, OnInit, Output,EventEmitter} from '@angular/core';
 import {AccountLogIn} from "../../../shared/interfaces/account-login";
 import {AccountRegistration} from "../../../shared/interfaces/account-registration";
+import {AccountService} from "../../../service/account.service";
+import {Router} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-reg-window',
   templateUrl: './reg-window.component.html',
-  styleUrls: ['./reg-window.component.scss']
+  styleUrls: ['./reg-window.component.scss'],
 })
 export class RegWindowComponent implements OnInit {
+
+  signupUsers: any[]=[];
+  signupObj: any = {
+    name: '',
+    login: '',
+    password: ''
+  };
+
+  loginObj: any = {
+  login: '',
+  password: ''
+};
+
   @Input() isAuthorized: string = '';
   @Output() public loginDataEmmiter = new EventEmitter<AccountLogIn>();
   @Output() public registerDataEmmiter =
@@ -20,11 +36,67 @@ export class RegWindowComponent implements OnInit {
   private PhoneNumber = '';
   private password = '';
 
-  constructor() {}
+  constructor(private accService: AccountService, private  route: Router) {}
   ngOnInit() {
-    this.isAuthorized;
+    const localData = localStorage.getItem('signUpUsers');
+    if(localData != null) {
+      this.signupUsers = JSON.parse(localData);}
+    // this.isAuthorized;
     // this.showAuthWindow == false? this.showAuthWindow = !this.isAuthorized
   }
+
+  // onSignUp() {
+  //   this.signupUsers.push(this.signupObj);
+  //   localStorage.setItem('signUpUsers',JSON.stringify(this.signupUsers));
+  //   this.signupObj = {
+  //     userName: '',
+  //     login: '',
+  //     password: '',
+  //   };
+  // }
+  goRegister(){
+    this.accService.goRegister(this.signupObj).subscribe((res:any)=> {
+      localStorage.setItem('signUpUsers',JSON.stringify(this.signupUsers));
+      this.signupObj = {
+            userName: '',
+            login: '',
+            password: '',
+          };
+      this.isRegistration = false;
+      this.showAuthWindow = true;
+      // console.log(this.signupUsers)
+      // console.log('1')
+
+
+    })
+
+  }
+
+  onLogin(){
+    // debugger
+    // const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
+    // if (isUserExist != undefined) {
+    //   alert('User Login Successfully');
+    // } else {
+    //   alert('wrong credentials');
+    this.accService.onLogin(this.loginObj).subscribe((res:any) =>{
+      console.log('res',res);
+      localStorage.setItem('token',res);
+      // if (res.token != undefined) {
+        this.route.navigateByUrl('/lk');
+      // this.route.navigate(['/lk']);
+
+      // } else {
+        this.isRegistration = !this.isRegistration;
+      this.showAuthWindow = !this.showAuthWindow;
+      // }
+      console.log(res);
+
+    })
+  }
+// }
+
+
 
   toggleAuthWindow() {
     this.showAuthWindow = !this.showAuthWindow;
@@ -65,4 +137,13 @@ export class RegWindowComponent implements OnInit {
     this.isRegistration = !this.isRegistration;
   }
 }
+
+
+
+// constructor() {
+//
+// }
+
+
+
 

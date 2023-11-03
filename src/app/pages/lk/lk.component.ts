@@ -16,12 +16,12 @@ export class LkComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.loadCustomer();
+    // this.loadCustomer();
   }
 
-  loadCustomer() {
-    this.accoService.getCustomers().subscribe((res: any) => {
-      debugger
-    })
-  }
+  // loadCustomer() {
+  //   this.accoService.getCustomers().subscribe((res: any) => {
+  //     debugger
+  //   })
+  // }
 }

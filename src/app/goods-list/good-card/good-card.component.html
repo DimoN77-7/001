@@ -1,14 +1,28 @@
-<ul>
+<!--<a [routerLink]="link">-->
+<div class="card">
+
+  <a class="text_decoration" routerLink="{{link}}">
+<!--<a routerLink="/ads/123">-->
+<!--<a routerLink="/product-descript/">-->
+<!--  <a routerLink="link">-->
 <!--            <div class="image_card" (click)="redirectToProductDetails(advert.id)">-->
 <!--              <div class="image_card" routerLink="good-descrip">-->
-                   <div class="image_card" routerLink="link">
+<!--<div class="image_card" routerLink="link">-->
+                   <div class="image_card">
               <img class="img" [src]="imageSrcCreator(advert.imagesIds[0])" alt="">
             </div>
-  <li  class="name">{{ advert.name }}</li>
-  <li class="cost">{{ advert.cost }}</li>
-  <li class="location">{{ advert.location }}</li>
-  <li class="date"></li>
-</ul>
+    <div class="cont">
+<!--      <h4><b>{{ advert.name }}</b></h4>-->
+       <p  class="name">{{ advert.name }}</p>
+       <p class="cost">{{ advert.cost  }} ₽</p>
+       <p class="location">{{ advert.location }}</p>
+       <p class="date"></p>
+<!--      <p class="date">  {{ advert.createdAt | date : "HH:mm dd.MM.YYYY" : undefined : "ru" }} </p>-->
+    </div>
+</a>
+</div>
+<!--</a>-->
+<!--<router-outlet></router-outlet>-->
 
 
 <!--<div class="total"  *ngFor="let advert of adverts;" >-->
