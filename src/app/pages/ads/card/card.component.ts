@@ -9,10 +9,12 @@ import { Observable, map } from 'rxjs';
   // standalone: true,
 })
 export class CardComponent {
+
   /*Для вывода компонента используем pipe*/
   public id: Observable<string> = this.activatedRoute.params.pipe(
     map((r: any) => r.id)
   );
+
   public guid: Observable<string> = this.activatedRoute.queryParams.pipe(
     map((r: any) => r.guid)
   );

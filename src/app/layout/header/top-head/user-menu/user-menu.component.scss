@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  color: white;
+  color: blue;
   .svg__person {
     margin-right: 4px;
   }
@@ -10,7 +10,7 @@
     fill: currentColor;
   }
   &:hover {
-    color: greenyellow;
+    color: black;
   }
 }
 .UserMenu {

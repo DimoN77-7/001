@@ -1,17 +1,28 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-user-menu',
   templateUrl: './user-menu.component.html',
   styleUrls: ['./user-menu.component.scss'],
 })
-export class UserMenuComponent {
+
+
+export class UserMenuComponent implements OnInit{
+  @Input() name1:string ;
   public showUserMenu = false;
-  public username = 'Коля';
+
   toggleUserMenu(): void {
     this.showUserMenu = !this.showUserMenu;
   }
+
+  ngOnInit(): void {}
+
+  onLogin(){
+  }
+
+
   logOut() {
-    console.log('Я хочу разлогиниться!!! Выыпустиии!!!');
+    // this.isLoggedIn = false;
+
   }
 }

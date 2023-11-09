@@ -1,6 +1,30 @@
-//.wrap {
-//  margin:  0 auto;
-//  max-width: 300px ;
-//  width: 100%;
-//  background-color: #cccccc;
-//}
+.container_header_bottom{
+  width: 1296px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+}
+.my_ann{
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.ann_list{
+  //display: block;
+  width: 1296px;
+  flex-direction: column;
+  //background-color: gray;
+}
+.new_ann{
+  position: absolute;
+  //display: flex;
+height: 336px;
+  width: 306px;
+  //background-color: gray;
+}

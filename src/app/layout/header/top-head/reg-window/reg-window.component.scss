@@ -20,8 +20,41 @@
     background: blue;
     color: white;
   }
-
 }
+.login-btn1 {
+  border: medium none;
+  background-image: none;
+  background: transparent;
+  float: left;
+  padding: 6px 12px;
+  font-size: 14px;
+  //background-color: transparent;
+  //display: flex;
+  //align-items: center;
+  border-radius: 4px;
+  gap: 8px;
+  color: white;
+  //& svg {
+  //  background: blue;
+  //  color: white;
+  //  //fill: currentColor;
+  //}
+  &:hover {
+    background: blue;
+    color: white;
+  }
+}
+.ShowUserMenu{
+  width: 60px;
+  height: auto;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 40px 0;
+  box-shadow: #64748b;
+  border-radius: 4px;
+  display: flex;
+}
+
 .authWindow {
   width: 416px;
   height: 360px;

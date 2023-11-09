@@ -10,6 +10,9 @@ export class AccountService {
 
   constructor(private http: HttpClient) {}
 
+  isloggined() {
+    return true;
+  }
 
   onLogin(obj: any): Observable<any> {
     return this.http.post(`${API_BASE}/Auth/Login`, obj);
@@ -20,6 +23,9 @@ export class AccountService {
     return this.http.post<any>(`${API_BASE}/Auth/Register`, obj);
   }
 
+  currentUsers(user: any): Observable<any> {
+    return this.http.get(`${API_BASE}/Users/current`, user);
+  }
 
 
 }

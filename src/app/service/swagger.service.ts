@@ -26,8 +26,8 @@ export class SwaggerService  {
       };
        return this.http.post<Advert[]>(`${API_BASE}/advert/search`, body)
         // .subscribe(res => this.adverts = res)
-
     };
+
   getProductById(id:any): Observable<any> {
     return this.http.get<any>('http://194.87.237.48:5000/Advert/' + id);
   }

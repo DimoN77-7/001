@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
     this.password = event.target.value;
   }
 
-  //Да, я поменял phoneNumber на login, ибо на бэке доступен только вход по логину, а у меня вся заготовка была под номер телефона
+
   submitLogIn(): void {
     let loginObj = {
       login: this.PhoneNumber,
