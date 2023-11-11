@@ -271,13 +271,23 @@ const routes: Routes = [
     path: 'product-descript',
     children: [{
       path: ':id',
-      title: 'Карточка2',
+      title: '',
     loadChildren: () =>
       import('./goods-list/product-descript/product-descript.module').then(
         (c) => c.ProductDescriptModule),
     // data: { description: 'Карточка чего-то там',},
       }
     ],
+  },
+  {
+      path: 'create-new-add',
+
+      title: 'new add',
+      loadChildren: () =>
+        import('./create-new-add/create-new-add.module').then(
+          (c) => c.CreateNewAddModule),
+      // data: { description: 'Карточка чего-то там',},
+
   },
   ]
 

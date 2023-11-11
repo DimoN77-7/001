@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ExitAccService} from "../../../../service/exit-acc.service";
 
 @Component({
   selector: 'app-user-menu',
@@ -6,23 +7,28 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./user-menu.component.scss'],
 })
 
-
-export class UserMenuComponent implements OnInit{
-  @Input() name1:string ;
+export class UserMenuComponent implements OnInit {
+  @Input() isLogined: boolean;
+  @Input() name1: string;
   public showUserMenu = false;
+  private Showlogin = true;
+
+  constructor(private exitAcc: ExitAccService) {
+    if (this.Showlogin !== false) {
+    }
+  }
 
   toggleUserMenu(): void {
     this.showUserMenu = !this.showUserMenu;
   }
 
-  ngOnInit(): void {}
-
-  onLogin(){
+  ngOnInit(): void {
   }
 
 
-  logOut() {
-    // this.isLoggedIn = false;
-
+  logOut(): void {
+    this.exitAcc.exitLog()
   }
+
+
 }

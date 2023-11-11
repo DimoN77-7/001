@@ -13,11 +13,10 @@ import {Router} from "@angular/router";
 })
 
 export class SwaggerService  {
-
+  // const myformData = new FormData(form);
   public adverts: Advert[]=[];
   constructor(private http: HttpClient, private route: Router) {
     this.getAdverts()
-
   }
     getAdverts(): Observable<Advert[]> {
       const body = {
@@ -29,7 +28,7 @@ export class SwaggerService  {
     };
 
   getProductById(id:any): Observable<any> {
-    return this.http.get<any>('http://194.87.237.48:5000/Advert/' + id);
+    return this.http.get<any>(`/Advert/` + id);
   }
 
     imageSrcCreator(id:string) : string {
@@ -37,6 +36,24 @@ export class SwaggerService  {
       let src = `${API_BASE}/images/${id}`;
       return src
     }
+  createAdvert(): Observable<any> {
+    return this.http.post<any>(`${API_BASE}/Advert`, {
+      method: "POST",
+      body: ""
+      }
+      // "name",
+      // description: '',
+      // images: '',
+      // cost: '',
+      // email: '',
+      // phone: '',
+      // location: '',
+      // categoryId: '',
+    )
+
+
+    }
+
 }
 
 

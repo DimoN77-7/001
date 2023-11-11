@@ -24,7 +24,6 @@ import { GoodCardComponent } from './goods-list/good-card/good-card.component';
 import {RouterModule} from "@angular/router";
 import { TopHeadComponent } from './layout/header/top-head/top-head.component';
 
-// import { GoodDescripComponent } from './goods-list/good-descrip/good-descrip.component';
 
 @NgModule({
   declarations: [
