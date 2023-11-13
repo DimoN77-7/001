@@ -279,16 +279,16 @@ const routes: Routes = [
       }
     ],
   },
-  {
-      path: 'create-new-add',
-
-      title: 'new add',
-      loadChildren: () =>
-        import('./create-new-add/create-new-add.module').then(
-          (c) => c.CreateNewAddModule),
-      // data: { description: 'Карточка чего-то там',},
-
-  },
+  // {
+  //     path: 'create-new-add',
+  //
+  //     title: 'new add',
+  //     loadChildren: () =>
+  //       import('./create-new-add/create-new-add.module').then(
+  //         (c) => c.CreateNewAddModule),
+  //     // data: { description: 'Карточка чего-то там',},
+  //
+  // },
   ]
 
 

@@ -39,14 +39,14 @@ export class TopHeadComponent implements OnInit{
 
   onLogin(event: AccountLogIn) {
     this.accountService.onLogin(event).subscribe((res) => {
-      // this.exitAcc.user_clear.subscribe((v2) => this.name1= v2);
+      this.exitAcc.user_clear.subscribe((v2) => this.name1= v2);
       // this.exitAcc.user_clear.next("Войти")
       /* res  -> token*/
-      // this.accountService.currentUsers(res).subscribe((x:any)=>{
-      //   this.user.next(x.name)
-      //   this.user.subscribe((v1)=>
-      //     this.name1 = x.name)
-      //   this.exitAcc.user_clear.next(x.name)})
+      this.accountService.currentUsers(res).subscribe((x:any)=>{
+        this.user.next(x.name)
+        this.user.subscribe((v1)=>
+          this.name1 = x.name)
+        this.exitAcc.user_clear.next(x.name)})
       if (typeof res === 'string') {
         localStorage.removeItem('token');
         localStorage.setItem('token', res);

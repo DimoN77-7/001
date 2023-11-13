@@ -108,47 +108,6 @@
   height: 48px;
 }
 
-.underPasswordWrapper {
-  display: flex;
-  margin-top: 8px;
-  justify-content: space-between;
-  align-items: center;
-  & .notRememberBtn {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: -6px;
-    color: #1e293b;
-    gap: 8px;
-    font-size: 16px;
-    & svg {
-      stroke: #cbd5e1;
-      &:hover {
-        stroke: #3b82f6;
-      }
-    }
-    & p {
-      &:hover {
-        color: currentColor;
-      }
-    }
-  }
-  & .rememberMeBtn {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: -6px;
-    gap: 8px;
-    color: #1e293b;
-    font-size: 16px;
-  }
-  & a {
-    color: #3b82f6;
-    &:hover {
-      color: rgb(163, 26, 163);
-    }
-  }
-}
 .enterBtn {
   width: 127px;
   height: 48px;

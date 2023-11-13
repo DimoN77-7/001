@@ -52,7 +52,7 @@ export class UserService {
 
   // allUsers(obj: any): Observable<any> {
   //   return this.http.get(`${API_BASE}/Users`, obj);
-  //   // return  http.post('http://194.87.237.48:5000/Auth/Register',obj);
+  //   // return  http.post('${API_BASE}/Auth/Register',obj);
   // }
 
 

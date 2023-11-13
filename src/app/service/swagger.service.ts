@@ -28,8 +28,8 @@ export class SwaggerService  {
     };
 
   getProductById(id:any): Observable<any> {
-    return this.http.get<any>(`/Advert/` + id);
-  }
+    return this.http.get<any>(`${API_BASE}/Advert/` + id);
+  };
 
     imageSrcCreator(id:string) : string {
       if (!id) return 'https://dummyimage.com/306x240&text=No+Image';

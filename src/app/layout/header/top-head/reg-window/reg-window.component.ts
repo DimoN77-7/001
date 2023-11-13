@@ -4,7 +4,7 @@ import {AccountRegistration} from "../../../../shared/interfaces/account-registr
 import {AccountService} from "../../../../service/account.service";
 import {Router} from "@angular/router";
 import {FormsModule} from "@angular/forms";
-import {Account} from "../../../../interfaces/account.interface";
+import {Account} from "../../../../shared/interfaces/account.interface";
 import {API_BASE} from "../../../../../main";
 import {UserService} from "../../../../service/user.service";
 import {BehaviorSubject} from "rxjs";
@@ -38,13 +38,9 @@ export class RegWindowComponent implements OnInit {
   @Output() public loginData = new EventEmitter<AccountLogIn>();
   @Output() public registerData = new EventEmitter<AccountRegistration>();
 
-  public login_btn = true;
-  public login_btn1 = false;
-  public  ShowUserMenu= false;
-  public showAuthWindow = false;
+  public showRegWindow = false;
   public rememberMe = false;
-  public isRegistration = false;
-  private name = '';
+  public Registration = false;
   private PhoneNumber = '';
   private password = '';
 
@@ -57,6 +53,35 @@ export class RegWindowComponent implements OnInit {
     if(localData != null) {
       this.signupUsers = JSON.parse(localData);}
   }
+
+  clickRegWindow() {
+    this.showRegWindow = !this.showRegWindow;
+    this.Registration = false;
+  }
+
+
+  setPhoneNumber(event: any): void {
+    this.PhoneNumber = event.target.value;
+  }
+  Password(event: any): void {
+    this.password = event.target.value;
+  }
+
+  clickLogIn(): void {
+    console.log(this.loginObj);
+    this.loginData.emit(this.loginObj);
+  }
+
+  clickRegistration(): void {
+    console.log(this.signupObj);
+    this.registerData.emit(this.signupObj);
+    this.Registration = !this.Registration;
+
+  }
+  clickRegisterForm() {
+    this.Registration = !this.Registration;
+  }
+}
 
   // onSignUp() {
   //   this.signupUsers.push(this.signupObj);
@@ -116,46 +141,7 @@ export class RegWindowComponent implements OnInit {
   // }
 // }
 
-  Showlogin_btn(){
-    this.login_btn = !this.login_btn;
-  }
 
-  toggleAuthWindow() {
-    this.showAuthWindow = !this.showAuthWindow;
-    this.isRegistration = false;
-  }
-  // UserMenu() {
-  //   this.ShowUserMenu = !this.ShowUserMenu;
-  //   console.log('UserMenu')
-  // }
-
-  rememberMeFunction(): void {
-    this.rememberMe = !this.rememberMe;
-  }
-
-  setPhoneNumber(event: any): void {
-    this.PhoneNumber = event.target.value;
-  }
-  setPassword(event: any): void {
-    this.password = event.target.value;
-  }
-
-  submitLogIn(): void {
-    console.log(this.loginObj);
-    this.loginData.emit(this.loginObj);
-  }
-
-  submitRegistration(): void {
-    console.log(this.signupObj);
-    this.registerData.emit(this.signupObj);
-    this.isRegistration = !this.isRegistration;
-    // this.showAuthWindow = !this.showAuthWindow;
-
-  }
-  goToRegisterForm() {
-    this.isRegistration = !this.isRegistration;
-  }
-}
 
 
 
