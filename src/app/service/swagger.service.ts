@@ -35,24 +35,19 @@ export class SwaggerService  {
       if (!id) return 'https://dummyimage.com/306x240&text=No+Image';
       let src = `${API_BASE}/images/${id}`;
       return src
-    }
-  createAdvert(): Observable<any> {
-    return this.http.post<any>(`${API_BASE}/Advert`, {
-      method: "POST",
-      body: ""
+    };
+
+  createAdvert(form: any): Observable<any> {
+    const newAddObj1 = new FormData();
+    newAddObj1.append('name', form.name);
+    newAddObj1.append( 'description', form.description);
+    newAddObj1.append("images", form.images);
+    newAddObj1.append("email", form.email);
+    newAddObj1.append("phone", form.phone);
+    newAddObj1.append("location", form.location);
+
+    return this.http.post<any>(`${API_BASE}/Advert`, form);
       }
-      // "name",
-      // description: '',
-      // images: '',
-      // cost: '',
-      // email: '',
-      // phone: '',
-      // location: '',
-      // categoryId: '',
-    )
-
-
-    }
 
 }
 

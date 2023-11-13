@@ -109,15 +109,13 @@
     *ngIf="isRegistration === false; else registerBtnTemplate"
     (click)="submitLogIn()">
 <!--    (click)="onLogin()" >-->
-<!--  >-->
-<!--    (click)="onLogin()"-->
 <!--    (click)="onSignUp()"-->
     Войти
   </button>
 
   <ng-template #registerBtnTemplate>
     <button class="registerBtn MainBtn" (click)="submitRegistration()"   >
-<!--            (click)="goRegister()" >-->
+
       Регистрация
     </button>
   </ng-template>

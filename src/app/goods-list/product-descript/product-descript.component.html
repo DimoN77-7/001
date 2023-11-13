@@ -8,21 +8,21 @@
 <!--  </div>-->
   <div class="productInfo">
     <div class="upTitle">
-      <div class="title">{{ product.name }}</div>
+      <div class="title">{{ advert.name }}</div>
       <div class="titleImg">
-         <img [src]="imageSrcCreator(product.imagesIds[0])" alt="" />
+         <img [src]="imageSrcCreator(advert.imagesIds[0])" alt="" />
       </div>
       <ul class="images">
-        <li class="image" *ngFor="let image of product.imagesIds">
-          <img class="img" [src]="imageSrcCreator(product.imagesIds[0])" alt="">
+        <li class="image" *ngFor="let image of advert.imagesIds">
+          <img class="img" [src]="imageSrcCreator(advert.imagesIds[0])" alt="">
 <!--          <img [src]="image" alt="" >-->
         </li>
       </ul>
     </div>
     <div class="description">
       <div class="cost">
-        {{product.cost}} ₽
-<!--        {{ product.cost | currency : "RUB" : "₽" : "1.0-0" : "ru" }}-->
+        {{advert.cost}} ₽
+<!--        {{ advert.cost | currency : "RUB" : "₽" : "1.0-0" : "ru" }}-->
       </div>
       <button class="phoneNumber MainBtn">
         <svg
@@ -45,7 +45,7 @@
       </button>
       <div class="adress">
         <p class="adressTitle">Адресс</p>
-        <p class="adressData">{{ product.location }}</p>
+        <p class="adressData">{{ advert.location }}</p>
         <a href="#"
         >Открыть на карте
           <svg
@@ -68,7 +68,7 @@
       </div>
       <div class="description">
         <p class="descriptionTitle">Описание</p>
-        <p class="descriptionData">{{ product.description }}</p>
+        <p class="descriptionData">{{ advert.description }}</p>
       </div>
     </div>
   </div>
@@ -78,8 +78,5 @@
 
 
 
-<!--<h4><b>{{ product.name }} </b></h4>-->
-<!--&lt;!&ndash;<p>{{ product.name }} </p>&ndash;&gt;-->
-<!--<p>{{ product.description }}</p>-->
-<!--<p>{{ product.created}}</p>-->
+
 

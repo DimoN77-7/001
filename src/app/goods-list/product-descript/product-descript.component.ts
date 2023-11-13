@@ -14,25 +14,29 @@ import {API_BASE} from "../../../main";
   // imports: [BredcrumbsComponent],
 })
 export class ProductDescriptComponent  implements OnInit {
-  // @Input() advert:Advert;
+  @Input() advert:Advert;
   public link: string;
-  // private id;
   public id: string;
   public guid: string;
   public description: string;
   private productId = '';
-   product : Advert;
+    // public product : any ;
 
 
   constructor(private activatedRoute: ActivatedRoute, private productDescript: SwaggerService) {
     this.activatedRoute.params.subscribe((params) => {
       this.productId = params['id'];
       console.log(this.productId);
-    //   this.productDescript.getProductById(this.productId)
-    //     .subscibe((productData)=> (this.id =productData ))
-    //   console.log(this.product);
     });
+    // this.productDescript
+    //   .getProductById(this.productId)
+    //   .subscribe((res) =>{
+    //     this.advert = res ;
+    //     console.log(this.advert);
+    //   } )
+
   }
+
   imageSrcCreator(id:string) : string {
     if (!id) return 'https://dummyimage.com/306x240&text=No+Image';
     let src = `${API_BASE}/images/${id}`;
@@ -44,10 +48,10 @@ export class ProductDescriptComponent  implements OnInit {
       this.productDescript
         .getProductById(this.productId)
         .subscribe((res) =>{
-          this.product = res ;
-          console.log(this.product);
+          this.advert = res ;
+          console.log(this.advert);
         } )
-        // .subscribe((res) => (this.product = res ));
+
 
   }
 }
